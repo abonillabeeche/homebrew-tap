@@ -5,21 +5,21 @@
 class Harvester < Formula
   desc "CLI tool for managing Harvester HCI clusters — create and control VMs, images, volumes, networks, and hosts."
   homepage "https://github.com/abonillabeeche/harvester-cli"
-  version "0.4.0"
+  version "0.5.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abonillabeeche/harvester-cli/releases/download/v0.4.0/harvester_0.4.0_darwin_amd64.tar.gz"
-      sha256 "a9bc203a9ea8e85f054fe84d5e2e9291904cd921c944ff6b80154414581caad2"
+      url "https://github.com/abonillabeeche/harvester-cli/releases/download/v0.5.0/harvester_0.5.0_darwin_amd64.tar.gz"
+      sha256 "32c3f460c87f510b4b0537eb08c60f5efac6a088431bc153ae117e53c7728d3b"
 
       define_method(:install) do
         bin.install "harvester"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abonillabeeche/harvester-cli/releases/download/v0.4.0/harvester_0.4.0_darwin_arm64.tar.gz"
-      sha256 "3f840e39ee12165ee41748ad5357899e6304f2dd39dfc72c353da7edcad9c482"
+      url "https://github.com/abonillabeeche/harvester-cli/releases/download/v0.5.0/harvester_0.5.0_darwin_arm64.tar.gz"
+      sha256 "b017ed18378d4b356ae473ec3326630f582018c446f92f9cd91e6c344a254cca"
 
       define_method(:install) do
         bin.install "harvester"
@@ -29,15 +29,15 @@ class Harvester < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abonillabeeche/harvester-cli/releases/download/v0.4.0/harvester_0.4.0_linux_amd64.tar.gz"
-      sha256 "ca095f7fe5e14fd98bf3ce2c42a9c48023cacb02426840ca68038262ec60b773"
+      url "https://github.com/abonillabeeche/harvester-cli/releases/download/v0.5.0/harvester_0.5.0_linux_amd64.tar.gz"
+      sha256 "cbe73277723982d33d3cb58df133f6d77884d71be082080c404411bed406814c"
       define_method(:install) do
         bin.install "harvester"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abonillabeeche/harvester-cli/releases/download/v0.4.0/harvester_0.4.0_linux_arm64.tar.gz"
-      sha256 "7917395d619e79f8dc0982bc596c8ba48ff6a3ff04b9bf46c5f3227eb6ef2b0f"
+      url "https://github.com/abonillabeeche/harvester-cli/releases/download/v0.5.0/harvester_0.5.0_linux_arm64.tar.gz"
+      sha256 "e4056f08748fd2744463cd405d935e32dd2760e2c5fa29128536752e71cea396"
       define_method(:install) do
         bin.install "harvester"
       end
